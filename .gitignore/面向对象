@@ -66,7 +66,7 @@ class me{
 class mytest{
   public static $name='jack';   //定义公有的静态属性
   public function get(){
-  echo self::name;    //调用本类中的静态属性，使用self::关键字
+  echo self::$name;    //调用本类中的静态属性，使用self::关键字
   }
 }
 class mt extends mytest{
