@@ -45,12 +45,15 @@ $test->getname();   //调用类中的getname方法
 //继承
 class fa{
   public $name='jack';
+  public static $sex='man';
   public function getname(){
   echo $this->name;
   }
 }
 class min extends fa{   //继承fa类的属性和方法
   public function get(){
+  echo parent::$sex;  //调用父类的静态属性
+  echo $this->name;   //调用父类的属性
   parent::getname();    //调用父类fa中的getname方法
   }
 }
